@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="https://www.w3schools.com/action_page.php" method="get">
+      <p>Do you have ?</p>
+      <br />
+      <input
+        type="checkbox"
+        id="screen"
+        name="computer_parts[]"
+        value="Screen"
+      />
+      <label for="screen">Screen</label>
+      <br />
+      <input type="checkbox" id="case" name="computer_parts[]" value="Case" />
+      <label for="case">Case PC</label>
+      <br />
+
+      <input
+        type="checkbox"
+        id="speaker"
+        name="computer_parts[]"
+        value="speaker"
+      />
+
+      <label for="speaker">Sony Speaker</label>
+      <br />
+      <input name="Send" type="submit" />
+    </form>
+    <!--để sử dụng radio chỉ chọn được 1 thoi thì thay type =radio   -->
+    <form action="https://www.w3schools.com/action_page.php" method="get">
+      <p>What is your favorite component ?</p>
+      <br />
+      <input type="radio" id="screen" name="computer_parts[]" value="Screen" />
+      <label for="screen">Screen</label>
+      <br />
+      <input type="radio" id="case" name="computer_parts[]" value="Case" />
+      <label for="case">Case PC</label>
+      <br />
+
+      <input
+        type="radio"
+        id="speaker"
+        name="computer_parts[]"
+        value="speaker"
+      />
+
+      <label for="speaker">Sony Speaker</label>
+      <br />
+      <input name="volume" type="range" step="" min="0" max="100000000" />
+      <input name="amount" value="1" min="1" max="999" type="number" />
+      <input name="Send" type="submit" />
+    </form>
+  </body>
+</html>

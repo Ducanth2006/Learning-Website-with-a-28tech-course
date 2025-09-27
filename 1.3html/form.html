@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <form action="https://dailydictation.com/exercises/short-stories" target="blank" method="post">
-        <!-- Có 2 phương thức là post và get , get sẽ gửi nhưng sẽ hiển thị trên được link và khi refresh lại sẽ giữ nguyên ,
+  </head>
+  <body>
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+      <!-- Có 2 phương thức là post và get , get sẽ gửi nhưng sẽ hiển thị trên được link và khi refresh lại sẽ giữ nguyên ,
           còn post sẽ không gửi lên ==> nó rất bảo mật và khi nhập xong gửi sẽ bị quay trở lại ban đầu vì nó không có trong link   -->
-        <label for="Your_email">Điền </label>  
-        <input name="Điền" type="email" id="Your_email">
-         
-        <select>
-            <option>Yellow</option>
-            <option>Red</option>
-            <option>Blue</option>
-            
-        </select>
-        <input type="submit" value="submit">
+      <label for="Your_email">Điền </label
+      ><!-- thằng sau for phải trùng với id thằng cần nhấn vào, nếu ta nhấn vào chữ điền thì sẽ tự động cho vào ô nhập tt
+       thằng này chỉ dùng được trong form   -->
+      <input
+        name="Input"
+        type="text"
+        id="Your_email"
+      /><!--ở input cái chúng ta nhập vào  là value nên chỉ cần name  -->
 
+      <select name="color" size="2">
+        <!--nó sẽ hiện thị mặc định 2 giá trị , giá trị còn lại phải scroll xuống -->
+        <option value="yellow">Yellow</option>
+        <!-- có value để có thể get or post cho bên backend thấy -->
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+      </select>
+      <input type="submit" value="submit" />
     </form>
-</body>
+  </body>
 </html>
