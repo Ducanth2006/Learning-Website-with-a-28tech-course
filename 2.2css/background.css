@@ -1,0 +1,26 @@
+body {
+  /* 1. Đặt hình nền */
+  background-image: linear-gradient(
+    to right,
+    rgb(180, 224, 230),
+    rgba(45, 226, 202, 0.815)
+  );
+
+  /* 2. Đặt kích thước để ảnh luôn bao phủ */
+  background-size: cover;
+  /* 3. Đảm bảo ảnh không lặp lại */
+  background-repeat: no-repeat;
+  /* 4. CỐ ĐỊNH background so với viewport */
+  background-attachment: fixed;
+}
+.sidebar {
+  background-image: linear-gradient(
+    to top,
+    rgb(162, 253, 182),
+    rgb(130, 165, 64)
+  );
+  width: 200px;
+  height: 800px;
+  border: 0px;
+  z-index: 100px;
+}
