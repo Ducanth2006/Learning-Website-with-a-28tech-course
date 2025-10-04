@@ -1,0 +1,50 @@
+/* background-clip: Xác định PHẠM VI HIỂN THỊ (cắt) của cả background-color và background-image. */
+
+/* background-origin: Xác định ĐIỂM GỐC (0 0) để tính toán background-position, chỉ áp dụng cho background-image. */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/* nên nhúng font chữ vào css cho dễ dàng khi có nhiều  trang  */
+.one {
+  background-color: blue;
+  border: 8px dashed green;
+  background-clip: padding-box;
+  margin-bottom: 10px;
+  margin-right: 60%;
+  padding: 25px;
+}
+.two {
+  background-image: linear-gradient(to left, violet, pink);
+  border: 8px dashed yellow;
+  margin-right: 60%;
+  padding: 25px;
+  background-origin: padding-box;
+  font-size: 30px;
+  text-align: center;
+  text-transform: lowercase;
+}
+/* phút 30 video 2 */
+/* một element gồm content padding border margin, lưu ý height và width chỉ áp dụng cho content  */
+/* để chỉnh được cả element thì ta */
+.three {
+  background-image: linear-gradient(to right, orange, green);
+  border: 2px solid black;
+  margin-top: 10px;
+  padding: 25px;
+  margin-right: 60%;
+  box-sizing: border-box; /*default content-box và
+   chiều height của thẻ div sẽ là 134px nếu là default,còn border sẽ là 80px */
+
+  height: 80px;
+}
+/* để chỉnh sửa text và font  */
+.three {
+  color: aqua; /* màu sắc của text*/
+  text-align: center; /* căn lề ngang của văn bản
+   justify khi chữ của class này dài hơn sẽ thấy  */
+  font-size: 30px; /* cỡ chữ */
+  text-transform: uppercase;
+}

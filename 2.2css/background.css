@@ -1,3 +1,6 @@
+/* 2 link đẻ lấy icon https://fontawesome.com/icons
+    lấy rồi paste vào head vì nó là thẻ link https://cdnjs.com/libraries/font-awesome
+   */
 body {
   /* 1. Đặt hình nền */
   background-image: linear-gradient(

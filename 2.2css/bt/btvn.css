@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
+.google-sans-code {
+  font-family: "Google Sans Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.bungee-spice-regular {
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.red {
+  color: red;
+  text-transform: capitalize;
+}
+#green {
+  color: green;
+  text-transform: capitalize;
+}
+.box1 {
+  background-image: linear-gradient(to right, purple, pink);
+  width: 200px;
+  height: 100px;
+}
+.img1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Tạo hiệu ứng parallax khi cuộn trang */
+  margin-top: 10px;
+
+  background-position: 30%;
+  width: 1000px;
+  height: 900px;
+
+  /* Đã thay bằng link ảnh trực tiếp */
+  background-image: url("https://static2.vieon.vn/vieplay-image/poster_v4/2025/07/20/fa848jw6_660x946-trieutuyetluc.png");
+}
+.box2 {
+  background-image: linear-gradient(to right, yellow, rgb(175, 70, 70));
+  height: 50px;
+  text-align: center;
+  padding-top: 20px;
+  border: 2px solid black;
+}
+.box3 {
+  background-color: bisque;
+  height: 50px;
+  border: 5px dashed;
+  margin-top: 10px;
+  background-origin: padding-box;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
