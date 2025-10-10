@@ -1,0 +1,22 @@
+/* div + p {
+  background-color: yellow;
+} tô vàng thẻ p */
+.box13 {
+  background-color: aqua;
+}
+.box1 section {
+  background-color: yellow;
+}
+/* thằng descedent này truy cập tất cả hậu duệ tìm từ con đến chắt */
+.box3 h1 {
+  background-color: blue;
+}
+label {
+  color: gray;
+}
+
+/* Khi checkbox được check, thay đổi label đứng ngay sau nó */
+input:checked + label {
+  color: rgb(25, 179, 179);
+  font-weight: bold;
+}
