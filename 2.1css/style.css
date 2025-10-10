@@ -1,0 +1,41 @@
+/* Thiết lập cơ bản cho trang */
+body {
+    background-color: #222; /* Nền tối để hiệu ứng nổi bật hơn */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.gradient-text {
+    font-size: 6rem; /* Kích thước chữ lớn */
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    /* BƯỚC 1: Định nghĩa màu nền là một dải gradient rực rỡ */
+    /* Đây là màu sẽ "đổ" lên chữ */
+    background-image: linear-gradient(
+        45deg,      /* Góc nghiêng của dải màu */
+        #ff7e5f 0%, /* Màu bắt đầu (Cam) */
+        #feb47b 25%, 
+        #ffd166 50%, /* Màu trung tâm (Vàng) */
+        #feb47b 75%,
+        #ff7e5f 100% /* Quay lại màu cuối (Cam) */
+    );
+    
+    /* BƯỚC 2: Cắt nền theo hình dạng của văn bản */
+    /* Cần prefix -webkit- cho khả năng tương thích trình duyệt (đặc biệt là Chrome/Safari) */
+    -webkit-background-clip: text; 
+    background-clip: text;
+    
+    /* BƯỚC 3: Làm cho màu chữ trong suốt để nền (đã cắt) hiển thị */
+    color: transparent; 
+}
+
+/* Thêm hiệu ứng shadow để tăng thêm vẻ bắt mắt (tùy chọn) */
+.gradient-text {
+    text-shadow: 2px 2px 5px rgba(255, 126, 95, 0.5);
+}
