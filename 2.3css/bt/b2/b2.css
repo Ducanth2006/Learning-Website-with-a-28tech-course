@@ -1,0 +1,22 @@
+table {
+  border: 2px solid black;
+  border-collapse: collapse; /*xóa border trong table để màu có thể phủ toàn bộ */
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden; /*phải có nếu muốn bo tròn */
+}
+.thead {
+  height: 30px;
+  background-color: rgb(82, 43, 226);
+}
+tbody {
+  transition: background-color 0.265s ease, transform 0.2s ease, color 0.5s ease;
+}
+tbody tr:hover {
+  background-color: rgb(47, 186, 196);
+  transform: scale(1.06);
+}
+tbody tr:active {
+  transform: scale(1);
+  color: brown;
+}
