@@ -1,0 +1,76 @@
+.parent{
+    border:2px solid red;
+}
+.child{
+    text-align:center;
+    color:white;
+    font-size:20px;
+    padding:20px;
+}
+.child1{
+    background-color:blue;
+    height:150px;
+    float:left;
+}
+.child2{
+    background-color:yellow;
+    height:150px;
+    /* clear:left/*ngăn thằng child2 ăn thăng child1*/; 
+    float:right;
+}
+.child3{
+    background-color:blueviolet;
+    height:250px;
+}
+.parent2{
+    position:relative;
+    margin-top:20px;/* là khoảng cách trên giữa nó và thằng parent*/
+    border:2px solid green;
+    /* c2 overflow:hidden; cũng giúp viền parent ko bị bẹt nhưng có tác dụng phụ  */
+    display:flow-root; /* c3Ngon thí cách new cũng giải quyết được */
+}
+.child4{
+    background-color:aqua;
+    height:100px;
+    float:left;
+}
+.child6{
+    background-color:rgb(242, 255, 0);
+    height:150px;
+    float:right;
+}
+.child5{
+    background-color:rgb(50, 59, 228);
+    height:100px;
+    float:right;
+}
+/*  c1để thằng viền của parennt 2 ko bị bẹt khi vưt quá thì cách dưới khá cổ  */
+/* .clear{
+    clear:both;
+} */
+.a_news{
+    margin-top:20px;
+}
+.child0{
+    margin:5px;
+    text-align:center;
+    padding:10px;
+    background-color:rgb(115, 126, 124);
+}
+.Main{
+    display:flow-root;
+
+}
+.side-left{
+    float:left;
+    width:25%;
+}
+.content{
+    float:left;
+    width:41%
+}
+.side-right{
+    float:right;
+    width:25%;
+}
+/* 1hour 6 phút */

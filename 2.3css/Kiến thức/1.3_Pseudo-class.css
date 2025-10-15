@@ -90,3 +90,4 @@ ul li:nth-child(4) {
 }
 /* thằng chọn phần tử giả này nó chỉ dùng được 1 lần duy nhất với mỗi thuộc tính 
  thằng before và after giúp code sạch kiểu như thêm icon vào trước cả thẻ li trong danh sách vậy  */
+ /* overflow:hidden đặt ở thằng cha , để thằng con không thừa ra */
