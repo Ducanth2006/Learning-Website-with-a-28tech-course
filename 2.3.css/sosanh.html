@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví Dụ Modal: display: none vs JS</title>
+    <style>
+        /* CSS Chung */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+/* nút thanh toán  */
+        .checkout-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;/* khi chỏ vào đây sẽ đổi dấu chuột */
+            transition: background-color 0.3s; /* nó sẽ giúp khi hover vào nó sẽ chuyển màu từ từ   */
+        }
+
+        .checkout-btn:hover {
+            background-color: #0056b3;/*cái màu hover sẽ chuyển thành */ 
+        }
+
+        /* --------------------------------- */
+        /* CSS Modal (Vùng Thanh Toán) */
+        /* --------------------------------- */
+
+        /* 1. Lớp làm mờ nền (Overlay) */
+        .modal-overlay {
+            /* Vị trí cố định (position: fixed) để che phủ toàn bộ màn hình */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
+            z-index: 1000; /* Đảm bảo nó luôn nằm trên cùng */
+            
+            /* **KEY CSS:** Ban đầu ẩn hoàn toàn khỏi luồng DOM
+            đặt ở đây để khi bản kích hoạt sự kiện nó sẽ kích hoạt cho cả thằng con  */
+            display: none; 
+        }
+
+        /* 2. Form Nội dung (Modal Content) */
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            /* Đưa nội dung vào giữa màn hình */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* thằng con này không cần z-index bởi vì nó sẽ tự động đè nên thằng cha  */
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Trang Mua Hàng Ví Dụ</h1>
+    
+    <button id="openModalBtn" class="checkout-btn">Nhấn để Thanh Toán</button>
+
+    <div id="paymentModal" class="modal-overlay">
+        <!-- thằng div con ở dưới này sẽ bị ẩn  -->
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close-btn">&times;</span> 
+
+            <h2>Thông Tin Thanh Toán</h2>
+            <form>
+                <p><label>Tên: <input type="text" style="width: 100%;"></label></p>
+                <p><label>Thẻ: <input type="text" style="width: 100%;"></label></p>
+                <button type="submit" class="checkout-btn" style="width: 100%; margin-top: 10px;">Xác Nhận</button>
+            </form>
+        </div>
+        
+    </div>
+
+    <script>
+        // Lấy các phần tử từ DOM
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const modal = document.getElementById('paymentModal');
+        
+        /* --------------------------------- */
+        /* JAVASCRIPT: Logic Ẩn/Hiện Modal */
+        /* --------------------------------- */
+
+        // 1. Hàm Mở Modal
+        openBtn.addEventListener('click', function() {
+            // Thay đổi thuộc tính CSS từ display: none sang display: block
+            modal.style.display = 'block';
+            console.log("Modal đã được mở. display: block");
+        });
+
+        // 2. Hàm Đóng Modal
+        closeBtn.addEventListener('click', function() {
+            // Thay đổi thuộc tính CSS từ display: block trở lại display: none
+            modal.style.display = 'none';
+            console.log("Modal đã được đóng. display: none");
+        });
+
+        // 3. Đóng Modal khi click ra ngoài Overlay
+        modal.addEventListener('click', function(event) {
+            // Kiểm tra xem click có phải vào chính phần tử overlay không
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                console.log("Modal đã được đóng do click ra ngoài.");
+            }
+        });
+        
+    </script>
+</body>
+</html>
