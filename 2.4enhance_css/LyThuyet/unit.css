@@ -1,0 +1,16 @@
+html {
+  font-size: 10px; /* nhớ là font size nhé*/
+}
+.parent {
+  background-color: blue;
+  width: 400px;
+  height: 400px;
+}
+.child1 {
+  background-color: black;
+  /* width: 50%; nó sẽ ăn theo cha */
+  /* height: 50%; nó sẽ ăn theo cha là parent */
+  width: 10rem; /* rem ăn theo font size của thẻ html , hay dùng nhất */
+  height: 20rem;
+  /* vh vw thì nó sẽ ăn theo kích thước trình duyệt */
+}
