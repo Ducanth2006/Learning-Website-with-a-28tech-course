@@ -1,0 +1,14 @@
+/* html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;
+}
+.parent {
+  width: calc(10rem - 30px);
+  height: calc(70px);
+  background-color: red;
+} */
+[attribute]::after {
+  content: attr(attribute);
+}

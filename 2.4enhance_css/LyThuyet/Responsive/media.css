@@ -1,0 +1,44 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 1024px) {
+  h1 {
+    color: aqua;
+  }
+  h2 {
+    color: blue;
+  }
+}
+
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px) {
+  h1 {
+    color: rgb(112, 236, 112);
+  }
+  h2 {
+    color: green;
+  }
+}
+/* Smart phone (480 x 640)*/
+@media screen and (max-width: 480px) {
+  h1 {
+    color: rgb(248, 124, 124);
+  }
+  h2 {
+    color: red;
+  }
+  /* Code */
+}
+/* Smart phone nhỏ */
+@media screen and (max-width: 320px) {
+  h1 {
+    color: rgb(243, 243, 119);
+  }
+  h2 {
+    color: orange;
+  }
+  /* Code */
+}
