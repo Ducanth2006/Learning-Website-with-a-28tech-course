@@ -1,0 +1,31 @@
+/* tiêu chuẩn đặt box-sizing */
+html {
+  /* Bắt đầu đặt box-sizing trên thẻ <html> */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  /* Dùng inherit để thẻ con thừa hưởng giá trị đã đặt ở <html> */
+  box-sizing: inherit;
+}
+
+.container {
+  display: flex;
+  background-color: rgb(42, 63, 253);
+  flex-wrap: wrap;
+  /* min-height: 60px; */
+  height: 300px;
+  /* align-items: flex-start;chỉ điều chỉ cho một dòng */
+  align-content: flex-end; /*thằng này điều chỉnh cho nhiều dòng vì vậy phải cần flex-wrap:wrap */
+  border-radius: 5px;
+}
+.item {
+  width: 140px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgb(230, 207, 6);
+  background-color: aqua;
+  border-radius: 5px;
+}
