@@ -1,0 +1,61 @@
+/* file này chứa để code cho các block  */
+/* Nhận thấy có 2 thằng block là tiêu đề ở đầu và cái mainbar chung 1 positon , suy ra cho nó vào chung 1 block  */
+.header {
+  position: sticky;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.topheader {
+  color: var(--secondary-color);
+  height: 3rem;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding-top: 1rem;
+}
+/* nhận thấy nhiều khối trong wed đều cách trái phải một đoạn và nằm ở giữa suy ra cần tạo một class có thể tái tạo   */
+/* nhớ rằng các thuộc tính flex dùng cho item không phải container nhé  */
+.container {
+  display: flex;
+  justify-content: center;
+}
+.bottomheader-content {
+  padding: 1rem;
+  width: 120rem;
+  display: flex;
+}
+.utilities_sidebar {
+  display: flex;
+  gap: 2.5rem;
+  margin-left: 22rem;
+  transition: all 0.3s ease;
+}
+.utilities_sidebar > li:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.social_network {
+  margin-left: 4rem;
+  font-size: 3rem;
+  color: var(--primary-color);
+  padding-top: 1.2rem;
+}
+.helps {
+  padding-top: 1.6rem;
+  font-size: 1.8rem;
+  margin-left: 3rem;
+  color: rgba(0, 0, 255, 0.438);
+}
+.icon_org {
+  height: 50px;
+  width: auto;
+  position: relative;
+}
+.icon_org > span {
+  position: absolute;
+  top: 1.6rem;
+}
+/* hãy nhận biết xem những thứ nào cần xếp hàng thì bọc nó bằng một thẻ container với flex  */
+.main-content1 {
+  background-color: rgb(241, 242, 246);
+  display: flex;
+  justify-content: space-between;
+}
