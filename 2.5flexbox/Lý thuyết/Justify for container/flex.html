@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="flex.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <div class="parent">
@@ -26,5 +30,35 @@
       <div class="item">Item</div>
       <div class="item">Item 7</div>
     </div>
+    <div class="login1 animate__animated animate__backInDown">Đăng nhập</div>
+    <div id="loginBox" class="login">Đăng nhập</div>
+    <script>
+      // đây là phần js để gán sự kiện của thư viện animation , sau để gán vào nút sau khi học js xong
+      // 1. Lấy phần tử bạn muốn làm hoạt hình
+      const box = document.getElementById("loginBox");
+
+      // Tên hiệu ứng bạn muốn dùng
+      const animationName = "animate__shakeX";
+
+      // Class bắt buộc của thư viện
+      const animatedClass = "animate__animated";
+
+      // 2. Lắng nghe sự kiện click
+      box.addEventListener("click", () => {
+        // A. Thêm các class để kích hoạt hiệu ứng
+        box.classList.add(animatedClass, animationName);
+
+        // B. Lắng nghe sự kiện khi animation kết thúc (để dọn dẹp class)
+        // Dùng 'animationend' để biết khi nào hiệu ứng hoàn tất
+        box.addEventListener(
+          "animationend",
+          () => {
+            // C. Xóa các class để chuẩn bị cho lần click tiếp theo
+            box.classList.remove(animatedClass, animationName);
+          },
+          { once: true }
+        ); // { once: true } đảm bảo hàm này chỉ chạy 1 lần
+      });
+    </script>
   </body>
 </html>

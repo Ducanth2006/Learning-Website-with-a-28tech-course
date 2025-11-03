@@ -61,3 +61,55 @@ Khoảng cách giữa item và lề = khoảng cách giữa item và item.*/
   border: 2px solid rgb(97, 80, 31);
   text-align: center;
 }
+.login1{
+  background-color:aqua;
+  display:inline-flex;
+  position:fixed;
+  left:49%;
+  width:150px;
+  height:150px;
+  text-align:center;
+  padding:10px;
+  z-index: 1000;
+}
+.login{
+  background-color:aquamarine;
+  width:100px;
+  height:100px;
+}
+/* flex-direction:row-reverse nó sẽ đảo ngược lại trục main ==> cẩn thận khi dùng justify hay align  */
+
+/* Nó xác định item nào sẽ xuất hiện trước, item nào xuất hiện sau dọc theo trục chính (Main Axis).
+
+Quy tắc: Các item có giá trị order nhỏ hơn sẽ luôn được xếp trước các item có giá trị order lớn hơn.
+Ví dụ:
+
+Bạn có 3 chú ếch trong mã HTML theo thứ tự: 🐸 Đỏ, 🐸 Vàng, 🐸 Xanh Lá.
+
+Nếu bạn đặt:
+
+Ếch Đỏ: order: 2;
+
+Ếch Vàng: order: 1;
+
+Ếch Xanh Lá: order: 0;
+
+Thứ tự trên màn hình sẽ là: 🐸 Xanh Lá (0), 🐸 Vàng (1), 🐸 Đỏ (2).
+ */
+/* thuộc tính align-self có độ ưu tiên cao hơn thuộc tính align-items trong Flexbox CSS */
+/* nowrap: Every item is fit to a single line.
+wrap: Items wrap around to additional lines.
+wrap-reverse: Items wrap around to additional lines in reverse.
+The two properties flex-direction and flex-wrap are used so often together that the shorthand property flex-flow was created to combine them.
+ This shorthand property accepts the value of the two properties separated by a space. */
+ /* The frogs are spread all over the pond, but the lilypads are bunched at the top. You can use align-content to set 
+ how multiple lines are spaced apart from each other. This property takes the following values:
+
+flex-start: Lines are packed at the top of the container.
+flex-end: Lines are packed at the bottom of the container.
+center: Lines are packed at the vertical center of the container.
+space-between: Lines display with equal spacing between them.
+space-around: Lines display with equal spacing around them.
+stretch: Lines are stretched to fit the container.
+This can be confusing, but align-content determines the spacing between lines, while align-items determines 
+how the items as a whole are aligned within the container. When there is only one line, align-content has no effect. */
