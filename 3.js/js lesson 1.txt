@@ -1,0 +1,39 @@
+js lesson 1
+undefined là bị động tức nó tự có 
+null là chủ động là do mình gán 
+==++==
+có 6 kiểu dữ liệu nguyên thủy
+Có 6 kiểu: Number, String, Boolean, Undefined, Null, Symbol
+Muốn thay thế được tất cả các từ tìm thấy thì phải dùng Regular Expression (Biểu thức chính quy).
+==block_scope==
+nếu dùng let x=3; ở ngoài tức global scope
+thì trong function mà có let x= 4; thì sẽ ưu tiên sử dụng x=4 trong function đó hơn 
+ở ngoài function đó thì sẽ ưu tiên x=3 
+== loop==
+Vòng lặp for in dùng để lấy ra key của một object (cũng có thể áp dụng cho array, string).
+Cú pháp:
+for (key in object) {
+    // Viết code ở đây
+}
+Trong đó:
+key: là tên biến (đặt tên là gì cũng được).
+object: là một object, mỗi key sẽ tương ứng với key ở trong object.
+để lấy được thằng value
+tenham[key]
+
+Vòng lặp for of dùng để lấy ra phần tử của một array, string (không áp dụng được với object).
+Cú pháp:
+for (variable of iterable) {
+    // Viết code ở đây
+}
+Trong đó:
+variable: là tên biến, lấy ra các giá trị trong mảng.
+iterable: là một mảng hoặc string, mỗi variable sẽ tương ứng với từng giá trị ở trong mảng hoặc string.
+
+trong một mảng có thể có object
+=nâng cao=
+Object.keys(name_object) và Object.values(name_object) sẽ trả về mảng key và mảng value
+nếu ta dùng for với Object.keys(object) thì để lấy được thằng value
+tenham[key]
+Object.entries(object) sẽ trả về  một Mảng các Mảng con [key, value] 
+tức mảng trong mảng ấy [ ['key1','value1'],['key2','value2']]
